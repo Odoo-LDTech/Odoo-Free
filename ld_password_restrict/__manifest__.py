@@ -19,5 +19,5 @@
     'images': ['static/description/icon.png'],
     'installable': True,
     'application': False,
-    'live_test_url' : 'https://www.youtube.com/watch?v=G2AaW8SBwOA'
+    'live_test_url' : 'https://www.youtube.com/watch?v=Yra14IxmFY4'
 }
