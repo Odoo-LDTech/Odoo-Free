@@ -13,10 +13,10 @@ class ResConfigSettings(models.TransientModel):
 	def get_values(self):
 		res = super(ResConfigSettings, self).get_values()
 		get_param = self.env['ir.config_parameter'].sudo().get_param
-		partner_ids = get_param('ld_cost_mail_alert.partner_ids', '[]')
+		partner_ids = get_param('ld_product_cost_mail_alert.partner_ids', '[]')
 		partner_ids = [(6, 0, literal_eval(partner_ids))]
 		res.update(
-			send_cost_mail_alert = self.env['ir.config_parameter'].sudo().get_param('ld_cost_mail_alert.send_cost_mail_alert'),
+			send_cost_mail_alert = self.env['ir.config_parameter'].sudo().get_param('ld_product_cost_mail_alert.send_cost_mail_alert'),
 			partner_ids = partner_ids,
 		)
 		return res
@@ -24,9 +24,9 @@ class ResConfigSettings(models.TransientModel):
 	def set_values(self):
 		res = super(ResConfigSettings, self).set_values()
 		param = self.env['ir.config_parameter'].sudo()
-		param.set_param('ld_cost_mail_alert.send_cost_mail_alert', self.send_cost_mail_alert)
+		param.set_param('ld_product_cost_mail_alert.send_cost_mail_alert', self.send_cost_mail_alert)
 		print("self.partner_ids.ids : ", self.partner_ids.ids)
-		param.set_param('ld_cost_mail_alert.partner_ids', self.partner_ids.ids)
+		param.set_param('ld_product_cost_mail_alert.partner_ids', self.partner_ids.ids)
 		return res
 
 class SaleOrder(models.Model):
@@ -42,8 +42,8 @@ class SaleOrder(models.Model):
 				p_list.append(line.product_id.id)
 		orderLines = self.order_line.filtered(lambda a:a.product_id.id in p_list)
 		if orderLines:
-			send_alert = get_param('ld_cost_mail_alert.send_cost_mail_alert')
-			partner_ids = get_param('ld_cost_mail_alert.partner_ids', '[]')
+			send_alert = get_param('ld_product_cost_mail_alert.send_cost_mail_alert')
+			partner_ids = get_param('ld_product_cost_mail_alert.partner_ids', '[]')
 			if literal_eval(send_alert):
 				partners = self.env['res.partner'].browse(literal_eval(partner_ids))
 				self.env.context = dict(self.env.context)
@@ -53,6 +53,6 @@ class SaleOrder(models.Model):
 						'email_to': partner.email if partner.email else '',
 						'user_name': partner.name,
 						'order_items': ', '.join(names) if len(names) > 0 else ''})
-					mail_template = self.env.ref('ld_cost_mail_alert.cost_mail_template_alertt').id
+					mail_template = self.env.ref('ld_product_cost_mail_alert.cost_mail_template_alertt').id
 					self.env['mail.template'].browse(mail_template).sudo().send_mail(self.id, force_send=True)
 		return res
