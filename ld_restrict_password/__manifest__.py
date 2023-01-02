@@ -11,6 +11,7 @@
     'author': "Livedigital Technologies Private Limited",
     'website': "ldtech.in",
     'category': 'Tools',
+    "license": "LGPL-3",
     'depends': ['website','auth_signup'],
     'data': [
         'views/assets.xml',
