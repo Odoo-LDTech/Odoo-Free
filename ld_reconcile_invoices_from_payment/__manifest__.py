@@ -6,12 +6,13 @@
     'summary': 'User can do payment of multiple invoice at same time of same customer.',
 
     'depends': ['sale_management', 'account', ],
+    "license": "LGPL-3",
 
     'data': [
         'security/ir.model.access.csv',
         'views/account_payment.xml',
         'wizard/multi_invoice.xml',
-        "license": "LGPL-3",
+        
 
     ],
 
