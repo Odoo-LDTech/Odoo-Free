@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rcs_view_form_inherit_otp" model="ir.ui.view">
+        <field name="name">rcs.view.form.inherit.otp</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='invite_users']" position="after">
+                <h2>Otp authentication</h2>
+                <div class="row mt16 o_settings_container" id="product_general_settings">
+                    <div class="col-12 col-lg-6 o_setting_box" id="weight_uom_setting">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="enable_otp_login" string="Enable one time password (otp) log in"/>
+                            <div class="text-muted">
+                                Enabling this option, will restrict users to log in to Odoo by
+                                entering otp sent on their email.
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="enable_otp_login" widget="boolean_toggle" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="manage_volume_uom_setting">
+                        <div class="o_setting_right_pane">
+                            <label for="opt_expire_duration" string="Otp expiration duration"/>
+                            <div class="text-muted">
+                                Amount in minutes by which otp will expire.
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="opt_expire_duration" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
