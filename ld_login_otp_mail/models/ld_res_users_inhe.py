@@ -22,7 +22,7 @@ class ResUsersInhe(models.Model):
         otp = ResUsersInhe.generate_otp()
         time_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.write(dict(auth_otp=otp, otp_timestamp=time_now))
-        template = self.env.ref('ld_login_otp_email.mail_template_email_otp', raise_if_not_found=False)
+        template = self.env.ref('ld_login_otp_mail.mail_template_email_otp', raise_if_not_found=False)
         if template:
             template.sudo().send_mail(self.id, force_send=True)
 
@@ -32,7 +32,7 @@ class ResUsersInhe(models.Model):
         diff_time = time_now - otp_time
         diff_minutes = diff_time.total_seconds() / 60
         icp = self.env['ir.config_parameter'].sudo()
-        opt_expire_duration = int(icp.get_param('ld_login_otp_email.opt_expire_duration', default=10))
+        opt_expire_duration = int(icp.get_param('ld_login_otp_mail.opt_expire_duration', default=10))
         if otp == self.auth_otp and diff_minutes <= opt_expire_duration:
             return 1
         elif otp == self.auth_otp and not diff_minutes <= opt_expire_duration:

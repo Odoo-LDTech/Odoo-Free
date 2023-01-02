@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <template id="ld_login_otp_email.verify_otp_template" name="Login">
+    <template id="ld_login_otp_mail.verify_otp_template" name="Login">
         <t t-call="web.login_layout">
 
 
