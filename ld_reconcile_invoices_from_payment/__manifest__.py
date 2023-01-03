@@ -12,15 +12,13 @@
         'security/ir.model.access.csv',
         'views/account_payment.xml',
         'wizard/multi_invoice.xml',
-        
-
     ],
 
     'author': "Livedigital Technologies Private Limited",
     'website': "ldtech.in",
     'support': 'suresh.hiyal@ldtech.in',
     'maintainer': 'Livedigital Technologies Private Limited',
-    'images': ['static/description/img/icon.png'],
+    'images': ['static/description/icon.png'],
     'demo': [],
     'installable': True,
     'application': True,
