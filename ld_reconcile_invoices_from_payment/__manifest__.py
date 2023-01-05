@@ -23,5 +23,5 @@
     'installable': True,
     'application': True,
     'auto_install': False,
-    'license': 'OPL-1',
+    'live_test_url': 'https://www.youtube.com/watch?v=MXCiB0ETie4&t=18s'
 }
