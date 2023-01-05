@@ -14,7 +14,8 @@
     'website': "ldtech.in",
 
     'category': 'Sales',
-    'version': "14.0.0.1",
+    'version': "16.0.0.1",
+    "license": "LGPL-3",
 
     'depends': ['base', 'mail', 'sale_management'],
 
@@ -26,5 +27,5 @@
     'images': ['static/description/icon.png'],
     'installable': True,
     'application': False,
-    'live_test_url' : 'https://www.youtube.com/watch?v=G2AaW8SBwOA'
+    'live_test_url' : 'https://www.youtube.com/watch?v=bjz-WoAEa1Q&t=15s'
 }
