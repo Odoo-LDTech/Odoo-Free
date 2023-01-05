@@ -27,5 +27,5 @@
     'images': ['static/description/icon.png'],
     'installable': True,
     'application': False,
-    'live_test_url' : 'https://www.youtube.com/watch?v=bjz-WoAEa1Q&t=15s'
+    # 'live_test_url' : 'https://www.youtube.com/watch?v=bjz-WoAEa1Q&t=15s'
 }
