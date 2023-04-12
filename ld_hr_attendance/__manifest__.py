@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'LD Odoo HRMS Grace Time',
+    'name': 'Odoo HRMS Grace Time',
     'author': 'Livedigital Technologies Private Limited',
     'company': 'Livedigital Technologies Private Limited',
     'maintainer': 'Livedigital Technologies Private Limited',
