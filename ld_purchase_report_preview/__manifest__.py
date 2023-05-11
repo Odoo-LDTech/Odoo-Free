@@ -14,6 +14,7 @@
     'installable': True,
     'active': False,
     'data': ['view.xml']
+    'images': ['static/description/icon.png'],
 
 }
 
