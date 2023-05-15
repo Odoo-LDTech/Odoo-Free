@@ -3,7 +3,7 @@
 # this module contains the full copyright notices and license terms.
 {
     'name': 'Payslip Excel Report',
-    'version': '16',
+    'version': "16.0.0.1",
     'author': "Livedigital Technologies Private Limited",
     'website': "ldtech.in",
     'category': 'Payroll',
