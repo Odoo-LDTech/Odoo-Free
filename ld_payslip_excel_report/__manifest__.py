@@ -7,7 +7,7 @@
     'author': "Livedigital Technologies Private Limited",
     'website': "ldtech.in",
     'category': 'Payroll',
-    "license": "LGPL-3",
+    # "license": "LGPL-3",
     'summary': 'Excel sheet for Payslip report',
     'description': """ Payslip excel report""",
     'depends': ['base', 'hr_payroll_community'],
