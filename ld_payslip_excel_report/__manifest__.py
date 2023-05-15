@@ -2,11 +2,11 @@
 
 {
     'name': 'Payslip Excel Report',
-    'version': "16.0.0.1",
     'author': "Livedigital Technologies Private Limited",
     'website': "ldtech.in",
     'category': 'Payroll',
-    # "license": "LGPL-3",
+    'version': '16.0.0.0',
+    'license': 'LGPL-3',
     'summary': 'Excel sheet for Payslip report',
     'description': """ Payslip excel report""",
     'depends': ['base', 'hr_payroll_community'],
