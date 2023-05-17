@@ -17,5 +17,6 @@
         'security/ir.model.access.csv',
         'ld_sql.xml'
     ],
+    'images': ['static/description/icon.png'],
 }
 
