@@ -1,5 +1,5 @@
 {
-    "name": "Ld Website Password Eye",
+    "name": "Website Password Eye",
     "version": "16.0.1.0.0",
     "category": "Website",
     "author": "Livedigital Technologies Private Limited",
