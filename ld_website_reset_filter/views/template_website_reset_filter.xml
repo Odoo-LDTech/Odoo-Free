@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="reset_filter" inherit_id="website_sale.products_categories" name="Reset Filter" customize_show="True" active="True">
+	        <xpath expr="//div[@id='wsale_products_categories_collapse']" position="before">
+	            <a class="btn btn-link pt8 pb8" href='/shop'>Reset All Filters</a>
+	        </xpath>
+	    </template>
+	</data>
+</odoo>
