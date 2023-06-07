@@ -9,6 +9,8 @@
     # 'currency': 'USD', 
     'license': 'LGPL-3',
     'category': 'Extra Tools','Productivity'
+    "price": 1000,
+    "currency": 'INR',
     'depends': ['base', 'web', 'mail'],
     'data': [
         'data/email_otp_template.xml',
