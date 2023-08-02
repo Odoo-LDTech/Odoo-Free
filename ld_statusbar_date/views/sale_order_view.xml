@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_sales_order_auto_done_setting" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="state_date" invisible="1"/>
+                <field name="state_days" invisible="1"/>
+            </field>
+            <field name="state" position="attributes">
+                <attribute name="widget">statusbar_custom</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

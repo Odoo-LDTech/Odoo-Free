@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="ld_statusbar_date.StatusBarFieldCustom" t-inherit="web.StatusBarField"
+       owl="1">
+
+            <xpath expr="//t[@t-if='item.isSelected']" position="replace">
+                <t t-if="item.isSelected">
+                    <button
+                        type="button"
+                        class="btn o_arrow_button_current o_arrow_button disabled text-uppercase"
+                        role="radio" aria-label="Current state"
+                        aria-checked="true" aria-current="step"
+                        t-att-disabled="props.isDisabled" t-att-data-value="item.id">
+
+                        <t t-esc="item.name"/>
+                        <button class="ms-2 days_pill_ld"><t t-esc="item.days"/></button>
+
+                    </button>
+                </t>
+
+            </xpath>
+
+    </t>
+</templates>
