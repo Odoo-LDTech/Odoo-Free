@@ -14,7 +14,7 @@
     'license': 'LGPL-3',
     'installable': True,
     'data': ['views/sale_order_view.xml'],
-    'images': ['static/description/icon.jpg'],
+    'images': ['static/description/banner.jpg'],
     'assets': {
         'web.assets_backend': [
             'ld_statusbar_date/static/src/**/*',
