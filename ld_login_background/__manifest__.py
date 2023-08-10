@@ -11,6 +11,7 @@
     'company': 'Livedigital Technologies Private Limited',
     'maintainer': 'Livedigital Technologies Private Limited',
     'website': 'https://ldtech.in',
+    'license': 'LGPL-3',
     'depends': ['base', 'base_setup', 'web', 'auth_signup'],
     'data': [
         'security/ir.model.access.csv',
@@ -23,6 +24,7 @@
     ],
     'qweb': [
     ],
+    'images': ['static/description/icon.png'],
     'installable': True,
     'application': True,
     'images': ['static/description/banner.png'],
