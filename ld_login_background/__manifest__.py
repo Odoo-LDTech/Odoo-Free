@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 {
-    'name': 'Login Background And Styles',
+    'name': 'Odoo Login page background',
     'summary': 'The new configurable Odoo Web Login Screen',
     'version': '16.0.0.1',
     'category': 'website',
